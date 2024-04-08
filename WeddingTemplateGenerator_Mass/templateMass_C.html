@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Mass</title>
+    <link href="stylesheet.css" rel="stylesheet">
+	<script>
+		var player = window.opener.GetPlayer();
+		var nmGroom = player.GetVar("nameGroom");
+		var nmBride = player.GetVar("nameBride");
+		var txtFirstReading = player.GetVar("firstReadingContent");
+		var txtResponse = player.GetVar("responseContent");
+		var dateWedding = player.GetVar("inpWeddingDate");
+		var txtGreeting = player.GetVar("greetingContent");
+		var txtCollect = player.GetVar("collectContent");
+		var txtSecondReading = player.GetVar("secondReadingContent");
+		var txtGospel1 = player.GetVar("gospelContent1");
+		var txtGospel2 = player.GetVar("gospelContent2");
+		var txtGospel3 = player.GetVar("gospelContent3");
+		var txtPrepDialogue = player.GetVar("prepDialogueContent");
+		var txtDeclaration = player.GetVar("declarationContent");
+		var txtReception = player.GetVar("receptionContent");
+		var txtBlessings = player.GetVar("blessingContent");
+		var txtOfferings = player.GetVar("offeringsContent");
+		var txtEucharistic = player.GetVar("eucharisticContent");
+		var txtNuptial = player.GetVar("nuptialContent");
+		var txtCommunion = player.GetVar("communionContent");
+		var txtMystery = player.GetVar("mysteryContent");
+		var txtSolemn1 = player.GetVar("solemnContent1");
+		var txtSolemn2 = player.GetVar("solemnContent2");
+		var txtSolemn3 = player.GetVar("solemnContent3");
+		var txtUnity = player.GetVar("unityContent");
+		var txtLady = player.GetVar("ladyContent");
+		var txtDismissal = player.GetVar("dismissalContent");
+		var txtAcknowledgment = player.GetVar("acknowledgeContent");
+	</script>
+	
+	<script>
+    function exportHTML(){
+       var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
+            "xmlns:w='urn:schemas-microsoft-com:office:word' "+
+            "xmlns='http://www.w3.org/TR/REC-html40'>"+
+            "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
+       var footer = "</body></html>";
+       var sourceHTML = header+document.getElementById("source-html").innerHTML+footer;
+       
+       var source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
+       var fileDownload = document.createElement("a");
+       document.body.appendChild(fileDownload);
+       fileDownload.href = source;
+       fileDownload.download = 'Wedding Template v1.1.doc';
+       fileDownload.click();
+       document.body.removeChild(fileDownload);
+    }
+	</script>
+	
+</head>
+<body>
+
+<div class="content-footer" style="padding: 14px 14px;">
+    <button id="btn-export" width="100px" height="50px" style = "font-size: 1rem; background-color: #D6C172; border-radius: 5px; border: 0px; cursor: pointer; padding: 14px 28px; color: white;" onclick="exportHTML();"><b>EXPORT TO WORD DOC</b></button>
+</div>
+
+<div id="source-html">
+	<table border="0" cellspacing="0" cellpadding="0" width="90%" style="margin: 2%;">
+		<tr align="center">
+			<td class="title" align="center" style="font-size: 50px; color:#9c7f16; font-family: Vivaldi, Helvetica, Arial;">
+			Order of Celebrating Matrimony<br><br><br><br>
+			</td>
+		</tr>
+		<tr align="center">
+			<td class="title" align="center" style="color:#9c7f16; font-family: Vivaldi, Helvetica, Arial;">
+				<span style="font-size: 38px">Wedding Mass<br>
+				</span>
+				<span style="font-size: 30px">
+				(for Catholics & Mixed Marriages)<br><br><br><br><br>
+				</span>
+			</td>
+		</tr>
+		<tr align="center">
+			<td class="title" align="center" style="font-size: 60px; color:#9c7f16; font-family: Vivaldi, Helvetica, Arial;">
+				<script type="text/javascript">document.write("<ms>"
+					+ unescape(nmGroom) + " and " + unescape(nmBride) + "</ms>");
+                </script>
+			</td>
+		</tr>
+				<tr align="center">
+			<td class="title" align="center" style="font-size: 18px;  text-decoration: underline; padding-top: 10px; margin-top: 25%; color:#9c7f16; font-family: Arial">
+				<script type="text/javascript">document.write(unescape(dateWedding));
+                </script> 
+			</td>
+		</tr>
+	</table>
+	<br><br><br><br><br><br>
+	
+	<table border="0" cellspacing="0" cellpadding="10" width="90%" style="margin: 2%; font-family: Arial">
+		<tr style="font-weight: bold; font-size: 28px">
+			<td colspan="2" align="center">
+				The Introductory Rites<br><br>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Please remain seated for the Bridal procession.</i>
+			</td>
+		</tr>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				BRIDAL MARCH
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: red">
+				&lt;Insert a hymn or instrumental that is liturgically appropriate for the sacrament of holy matrimony.><br>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Please stand to welcome the Bride.</i>
+			</td>
+		</tr>
+		<tr><td></td></tr>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				ENTRANCE HYMN
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: red">
+				&lt;Insert a hymn or instrumental that is liturgically appropriate for the sacrament of holy matrimony.><br>
+			</td>
+		</tr>
+	<tr><td></td></tr>
+		<tr>
+			<td colspan="2" style="text-decoration: underline">
+				GREETING
+			</td>
+		</tr>
+	
+		<tr>
+			<td width="15%" style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				In the name of the Father, † and of the Son, and of the Holy Spirit.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Amen.
+			</td>
+		</tr>
+		<tr>
+			<td width="15%" style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				The grace of our Lord Jesus Christ, and the love of God, and the communion of the Holy Spirit be with you all.
+
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				And with your spirit.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write(unescape(txtGreeting));
+				</script> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-decoration: underline">
+				<br>GLORIA
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="font-size: 0.9rem; font-weight: bold">
+				<i>(During Lent & Advent, the Gloria is not sung or said).</i>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Glory to God in the highest,<br> 
+				and on earth peace to people of good will.<br> 
+				<br> 
+				We praise you, <br> 
+				we bless you,<br> 
+				we adore you,<br> 
+				we glorify you,<br> 
+				we give you thanks for your great glory,<br> 
+				Lord God, heavenly King,<br> 
+				O God, almighty Father.<br> 
+				<br> 
+				Lord Jesus Christ, Only Begotten Son, <br> 
+				Lord God, Lamb of God, Son of the Father,<br> 
+				you take away the sins of the world, have mercy on us;<br> 
+				you take away the sins of the world, receive our prayer;<br> 
+				you are seated at the right hand of the Father, <br> 
+				have mercy on us.   <br> 
+				<br> 
+				For you alone are the Holy One,<br> 
+				you alone are the Lord,<br> 
+				you alone are the Most High, <br> 
+				Jesus Christ,<br> 
+				with the Holy Spirit,<br> 
+				in the glory of God the Father.<br> 
+				Amen.<br>
+			</td>
+		</tr>
+		<tr><td></td></tr>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				COLLECT
+			</td>
+		</tr>
+		<tr>
+			<td width="15%" style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>Let us pray.<br><br>" + unescape(txtCollect) + "<br></ms>");
+                </script> 
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Amen.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Please be seated.</i>
+			</td>
+		</tr>
+		<tr style="font-weight: bold; font-size: 28px">
+			<td colspan="2" align="center">
+				<br>Liturgy of the Word
+			</td>
+		</tr>
+		<tr  style="text-decoration: underline">
+			<td colspan="2">
+				FIRST READING
+			</td>
+		</tr>
+		<tr>
+		<td style="vertical-align: top">
+				Lector:
+			</td>
+			<td>
+				<script type="text/javascript">document.write(unescape(txtFirstReading));
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Thanks be to God.
+			</td>
+		</tr>
+		<tr  style="text-decoration: underline">
+			<td colspan="2">
+				<br>RESPONSORIAL PSALM
+			</td>
+		</tr>
+		<tr>
+			<td width="15%" style="vertical-align: top">
+				<b>Response:</b>
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write(unescape(txtResponse));
+				</script> 
+			</td>
+		</tr>
+		<tr  style="text-decoration: underline">
+			<td colspan="2">
+				<br>SECOND READING
+			</td>
+		</tr>
+		<tr>
+		<td style="vertical-align: top">
+				Lector:
+			</td>
+			<td>
+				<script type="text/javascript">document.write(unescape(txtSecondReading));
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Thanks be to God.<br>
+			</td>
+		</tr>
+		<tr  style="text-decoration: underline">
+			<td colspan="2">
+				<br>GOSPEL ACCLAMATION
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Please stand.</i>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Alleluia! Alleluia! Alleluia!<br>
+			<i><b><span style="font-size: 0.9rem">(During Lent, "Alleluia" is not said or sung)</span></b></i>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Cantor:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write(unescape(txtGospel1));
+				</script>
+			</td>
+		</tr>		
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Alleluia! Alleluia! Alleluia!<br>
+			<i><b><span style="font-size: 0.9rem">(During Lent, "Alleluia" is not said or sung)</span></b></i>
+			</td>
+		</tr>
+		<tr  style="text-decoration: underline">
+			<td colspan="2">
+				<br>GOSPEL PROCLAMATION
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				The Lord be with you.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				And with your spirit.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>A reading from the holy Gospel according to " + unescape(txtGospel2) + "</ms>");
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Glory to You, O Lord.<br>
+			</td>
+		</tr>
+		<tr  style="text-decoration: underline">
+			<td colspan="2">
+				<br>GOSPEL
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write(unescape(txtGospel3));
+				</script><br>The Gospel of the Lord. 
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Praise to you, Lord Jesus Christ. 
+			</td>
+		</tr>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				<br>HOMILY
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Please be seated.</i>
+			</td>
+		</tr>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				<br>THE CELEBRATION OF MARRIAGE
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Only bride and bridegroom stand and both the witnesses come forward and stand beside them.</i>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				Dearly beloved,<br>you have come together into the house of the Church,<br>so that in the presence of the Church's minister and the<br>community your intention to enter into Marriage<br>may be strengthened by the Lord with a sacred seal.<br>Christ abundantly blesses the love that binds you.<br><br>Through a special Sacrament, he enriches and strengthens<br>those he has already consecrated by Holy Baptism,<br>that they may be faithful to each other for ever<br>and assume all the responsibilities of married life.<br><br>And so, in the presence of the Church, <br>I ask you to state your intentions.
+			</td>
+		</tr>
+		<tr style="text-decoration: underline">
+			<td colspan="2">
+				<br>THE QUESTIONS BEFORE THE CONSENT
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>" + unescape(nmGroom) + " and " + unescape(nmBride) + ", have you come here to enter into Marriage without coercion, freely and wholeheartedly?</ms>");
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>" + unescape(nmGroom) + ":</ms>");
+				</script>
+			</td>
+			<td style="vertical-align: top">
+				I have.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>" + unescape(nmBride) + ":</ms>");
+				</script>
+			</td>
+			<td style="vertical-align: top">
+				I have.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				Are you prepared, as you follow the path of Marriage, to love and honour each other for as long as you both shall live?
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>" + unescape(nmGroom) + ":</ms>");
+				</script>
+			</td>
+			<td style="vertical-align: top">
+				I am.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>" + unescape(nmBride) + ":</ms>");
+				</script>
+			</td>
+			<td style="vertical-align: top">
+				I am.
+			</td>
+		</tr>
+					<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				Are you prepared to accept children lovingly from God and to bring them up according to the law of Christ and his Church?
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>" + unescape(nmGroom) + ":</ms>");
+				</script>
+			</td>
+			<td style="vertical-align: top">
+				I am.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>" + unescape(nmBride) + ":</ms>");
+				</script>
+			</td>
+			<td style="vertical-align: top">
+				I am.
+			</td>
+		</tr>
+		<tr style="text-decoration: underline">
+			<td colspan="2">
+				<br>DECLARATION OF CONSENT
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>" + unescape(nmGroom) + " and " + unescape(nmBride) + ", since it is your intention to enter into the covenant of Holy Matrimony, join your right hands, and declare your consent before God and his Church.</ms>");
+				</script>
+			</td>
+		</tr>
+		<tr>
+		<script type="text/javascript">document.write(unescape(txtDeclaration));
+				</script>
+		</tr>
+		<tr style="text-decoration: underline">
+			<td colspan="2">
+				<br>THE RECEPTION OF THE CONSENT
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write(unescape(txtReception));
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Thanks be to God.
+			</td>
+		</tr>
+		<tr style="text-decoration: underline">
+			<td colspan="2">
+				<br>THE BLESSING AND GIVING OF RINGS
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>The ring bearer comes forward with the rings.</i>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write(unescape(txtBlessings));
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Bridegroom & Bride:
+			</td>
+			<td style="vertical-align: top">
+				Amen.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>The Celebrant sprinkles the ring with Holy Water, and gives them to the bridegroom and bride.</i>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<br><i>The husband places his wife's ring on her ring finger, saying:</i>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Bridegroom:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>" + unescape(nmBride) + ", receive this ring<br>as a sign of my love and fidelity.<br>In the name of the Father, and of the Son,<br>and of the Holy Spirit.</ms>");
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Likewise, the wife places her husband's ring on his ring finger, saying:</i>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Bride:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>" + unescape(nmGroom) + ", receive this ring<br>as a sign of my love and fidelity.<br>In the name of the Father, and of the Son,<br>and of the Holy Spirit.</ms>");
+				</script>
+			</td>
+		</tr>
+		<tr style="text-decoration: underline">
+			<td colspan="2">
+				<br>LIFTING OF THE VEIL
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>" + unescape(nmGroom) + " and " + unescape(nmBride) + ",<br>you have made promises to each other.<br>The rings you now wear will always remain<br>a symbol of your vows.<br>Through the ministry of the Church,<br>I now pronounce you man and wife.</ms>");</script>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>~ The bridegroom lifts the veil of the bride. ~</i>
+			</td>
+		</tr>
+				<tr style="font-weight: bold">
+			<td colspan="2">
+				<br>GENERAL INTERCESSIONS
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Please stand.</i>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>Dear brothers and sisters,<br>as we call to mind the special <br>gift of grace and charity <br>by which God has been pleased <br>to crown and consecrate <br>the love of our sister, " + unescape(nmBride) + "<br>and our brother, " + unescape(nmGroom) + "<br>let us commend them to the Lord.</ms>");</script>
+			</td>
+		</tr>
+			<tr>
+			<td style="vertical-align: top">
+				<b>Response:</b>
+			</td>
+			<td style="vertical-align: top">
+				<b>Lord, we ask you, hear our prayer.</b>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Lector:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>That these faithful couple/Christians,<br>" + unescape(nmGroom) + " and " + unescape(nmBride) + ", newly joined in Holy Matrimony, <br>may always enjoy health and well-being, <br>let us pray to the Lord. <b>Response.</b></ms>");
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Lector:
+			</td>
+			<td style="vertical-align: top">
+				That he will bless their covenant as he chose <br>to sanctify marriage at Cana in Galilee, <br>let us pray to the Lord. <b>Response.</b>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Lector:
+			</td>
+			<td style="vertical-align: top">
+				That they be granted perfect and fruitful love, <br>peace and strength, and that they bear <br>faithful witness to the name of Christian, <br>let us pray to the Lord. <b>Response.</b>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Lector:
+			</td>
+			<td style="vertical-align: top">
+				That the Christian people may grow in virtue day by day <br>and that all who are burdened by any need <br>may receive the help of grace from above, <br>let us pray to the Lord. <b>Response.</b>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Lector:
+			</td>
+			<td style="vertical-align: top">
+				That the grace of the Sacrament will be renewed <br>by the Holy Spirit in all married persons here present, <br>let us pray to the Lord. <b>Response.</b>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				Let us pray.<br><br>Graciously pour out upon this husband and wife,<br> O Lord, the Spirit of your love, to make them one heart <br>and one soul, so that nothing whatever may divide <br>those you have joined and no harm come <br>to those you have filled with your blessing. <br>Through Christ our Lord.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Amen.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Please be seated.</i>
+			</td>
+		</tr>
+		<tr style="font-weight: bold; font-size: 28px">
+			<td colspan="2" align="center">
+				<br>Liturgy of the Eucharist
+			</td>
+		</tr>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				<br>OFFERTORY HYMN
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: red">
+				&lt;Insert a hymn or instrumental that is liturgically appropriate for the sacrament of holy matrimony.><br>
+			</td>
+		</tr>
+		<tr style="color: red">
+			<td colspan="2">
+				If there is singing of offertory hymn, please delete this part below:<br>If there is no singing, the following may be used.
+			</td>
+		</tr>
+		<tr style="color: red">
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				Blessed are you, Lord God of all creation,<br>for through your goodness we have received the bread we <br>offer you: fruit of the earth and work of human hands,<br> it will become for us the bread of life.
+			</td>
+		</tr>
+		<tr style="color: red">
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Blessed be God for ever.
+			</td>
+		</tr>
+		<tr style="color: red">
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				Blessed are you, Lord God of all creation,<br>for through your goodness we have received the wine we offer <br>you: fruit of the vine and work of human hands,<br> it will become our spiritual drink.
+			</td>
+		</tr>
+		<tr style="color: red">
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Blessed be God for ever.
+			</td>
+		</tr>
+		<tr style="text-decoration: underline">
+			<td colspan="2">
+				<br>INVITATION TO PRAYER
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Please stand.</i>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				Pray, brethren, that my sacrifice and yours<br>may be acceptable to God, the almighty Father.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				May the Lord<br>accept the sacrifice at your hands,<br>for the praise and glory of his name,<br>for our good, and the good of all his holy Church.
+			</td>
+		</tr>
+		<tr style="text-decoration: underline">
+			<td colspan="2">
+				<br>PRAYER OVER THE OFFERINGS
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write(unescape(txtOfferings));
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Amen.
+			</td>
+		</tr>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				<br>EUCHARISTIC PRAYER II
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				The Lord be with you.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				And with your spirit.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				Lift up your hearts.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				We lift them up to the Lord.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				Let us give thanks to the Lord our God.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				It is right and just.
+			</td>
+		</tr>
+		<tr style="text-decoration: underline">
+			<td colspan="2">
+				<br>PREFACE
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write(unescape(txtEucharistic));
+				</script>
+			</td>
+		</tr>
+		<tr style="text-decoration: underline">
+			<td colspan="2">
+				<br>SANCTUS
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Holy, Holy, Holy, Lord God of hosts.<br>Heaven and earth are full of Your glory.<br>Hosanna in the highest.<br>Blessed is he who comes in the name of the Lord.<br>Hosanna in the highest.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Catholics please kneel. Non-Catholics may be seated.</i>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				You are indeed Holy, O Lord, the fount of all holiness.<br>Make holy, therefore, these gifts, we pray, <br>by sending down your Spirit upon them like the dewfall,<br>so that they may become for us the Body and † Blood <br>of our Lord Jesus Christ. <br><br>At the time he was betrayed <br>and entered willingly into his Passion,<br>he took bread and, giving thanks, broke it, <br>and gave it to his disciples, saying: <br><br>TAKE THIS, ALL OF YOU, AND EAT OF IT, <br>FOR THIS IS MY BODY, <br>WHICH WILL BE GIVEN UP FOR YOU.<br><br>In a similar way, when supper was ended,<br>he took the chalice<br>and, once more giving thanks,<br>he gave it to his disciples, saying: <br><br>TAKE THIS, ALL OF YOU, AND DRINK FROM IT,<br>FOR THIS IS THE CHALICE OF MY BLOOD, <br>THE BLOOD OF THE NEW AND ETERNAL COVENANT,<br>WHICH WILL BE POURED OUT FOR YOU <br>AND FOR MANY FOR THE FORGIVENESS OF SINS.<br>DO THIS IN MEMORY OF ME.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				The mystery of faith.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write(unescape(txtMystery));
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				Therefore, as we celebrate <br>the memorial of his Death and Resurrection, <br>we offer you, Lord, <br>the Bread of life and the Chalice of salvation, <br>giving thanks that you have held us worthy <br>to be in your presence and minister to you.<br><br>
+				Humbly we pray that, <br>partaking of the Body and Blood of Christ, <br>we may be gathered into one by the Holy Spirit.<br><br>
+				Remember, Lord, your Church, <br>spread throughout the world, <br>and bring her to the fullness of charity, <br>together with Francis, our Pope and William, <br>our Bishop and all the clergy. 
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write("<ms>Be mindful also, Lord, of " + unescape(nmGroom) + " and " + unescape(nmBride) + "<br>whom you have brought to their wedding day,<br>so that by your grace they may abide <br>in mutual love and in peace.</ms>");
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+			</td>
+			<td style="vertical-align: top">
+				Remember also our brothers and sisters <br>who have fallen asleep in the hope of the resurrection, <br>and all who have died in your mercy: <br>welcome them into the light of your face.<br><br> Have mercy on us all, we pray, <br>that with the Blessed Virgin Mary, Mother of God, <br>with blessed Joseph, her spouse, <br>with the blessed Apostles, <br>with St. Ignatius of Loyola,<br>and all the Saints <br>who have pleased you throughout the ages, <br>we may merit to be coheirs to eternal life,<br> and may praise and glorify you <br>through your Son, Jesus Christ.
+			</td>
+		</tr>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				<br>DOXOLOGY
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				Through him, and with him, and in him,<br>O God, almighty Father,<br>in the unity of the Holy Spirit,<br>all glory and honour is yours,<br>for ever and ever.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Amen.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Please stand.</i>
+			</td>
+		</tr>
+		<tr style="font-weight: bold; font-size: 28px">
+			<td colspan="2" align="center">
+				<br>Communion Rite
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				At the Saviour’s command<br>and formed by divine teaching,<br>we dare to sing/say:
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Our Father, who art in heaven,<br>hallowed be thy name; thy kingdom come;<br>thy will be done on earth as it is in heaven.<br>Give us this day our daily bread;<br>and forgive us our trespasses<br>as we forgive those who trespass against us;<br>and lead us not into temptation,<br>but deliver us from evil.
+			</td>
+		</tr>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				<br>THE NUPTIAL BLESSING
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>The bride and bridegroom kneel, while the congregation remains standing. The Priest, with hands joined, calls upon those present to pray:</i>
+			</td>
+		</tr>
+				<script type="text/javascript">document.write(unescape(txtNuptial));
+				</script>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Amen.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>The bridegroom and the bride stand.</i>
+			</td>
+		</tr>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				<br>SIGN OF PEACE
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				The peace of the Lord be with you always.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				And with your spirit.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				Let us offer each other the sign of peace.
+			</td>
+		</tr>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				<br>BREAKING OF THE BREAD
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Lamb of God, you take away the sins of the world,<br>have mercy on us.<br><br>Lamb of God, you take away the sins of the world,<br>have mercy on us.<br><br>Lamb of God, you take away the sins of the world,<br> grant us peace.<br>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Catholics please kneel. Non-Catholics may be seated.</i>
+			</td>
+		</tr>
+		<tr style="text-decoration: underline">
+			<td colspan="2">
+				<br>HOLY COMMUNION
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				Behold the Lamb of God,<br> behold him who takes away the sins of the world.<br> Blessed are those called to the supper of the Lamb.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Lord, I am not worthy <br>that you should enter under my roof,<br>but only say the word <br>and my soul shall be healed.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Please note that Holy Communion is distributed only to baptised and practising Catholics.</i>
+			</td>
+		</tr>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				<br>COMMUNION HYMN
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: red">
+				&lt;Insert a hymn or instrumental that is liturgically appropriate for the sacrament of holy matrimony.><br>
+			</td>
+		</tr>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				<br>PRAYER AFTER COMMUNION
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>Please stand.</i>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write(unescape(txtCommunion));
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Amen.
+			</td>
+		</tr>
+		<tr style="font-weight: bold; font-size: 28px">
+			<td colspan="2" align="center">
+				<br>Concluding Rite
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+			The Lord be with you.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+			And with your spirit.
+			</td>
+		</tr>
+		<tr style="text-decoration: underline">
+			<td colspan="2">
+				<br>BLESSING
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>At the end of the Mass, the Celebrant, with hands extended over the bride and bridegroom, says:</i>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write(unescape(txtSolemn1));
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Amen.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write(unescape(txtSolemn2));
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Amen.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write(unescape(txtSolemn3));
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Amen.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<i>And he blesses all present, adding:</i>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				And may almighty God bless all of you,<br>who are gathered here, <br>the Father, and the Son, † and the Holy Spirit.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Amen.
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				Celebrant:
+			</td>
+			<td style="vertical-align: top">
+				<script type="text/javascript">document.write(unescape(txtDismissal));
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				All:
+			</td>
+			<td style="vertical-align: top">
+				Thanks be to God.
+			</td>
+		</tr>
+		<script type="text/javascript">document.write(unescape(txtUnity));
+				</script>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				<br>SIGNING OF THE MARRIAGE REGISTER
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="left" style="font-size: 0.9rem; font-weight: bold">
+				<script type="text/javascript">document.write("<ms><i>The Celebrant invites " + unescape(nmGroom) + " and " + unescape(nmBride) + ", together with the witnesses to sign the Marriage Register.</i></ms>");
+				</script><br><br>
+				<i>Photo taking with priest, parents or witnesses.</i>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: red">
+				&lt;Insert a hymn or instrumental that is liturgically appropriate for the sacrament of holy matrimony.><br>
+			</td>
+		</tr>
+		<script type="text/javascript">document.write(unescape(txtLady));
+				</script>
+		<tr style="font-weight: bold">
+			<td colspan="2">
+				<br>RECESSIONAL
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: red">
+				&lt;Insert a hymn or instrumental that is liturgically appropriate for the sacrament of holy matrimony.><br><br><br><br><br><br>
+			</td>
+		</tr>
+		<tr style="font-weight: bold; font-size: 28px">
+			<td colspan="2" align="center">
+				<br>APPRECIATION<BR>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<span style="font-size: 18px"><b>Our heartfelt thanks to</b></span><br><br>God, our heavenly Father and our Lord Jesus Christ for the gift of our love and for guiding us in our loving relationship.<br><br>Mother Mary and all the Angels and saints for their continuous intercession, protection and love for us.<br><br> Fr. <u>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</u> S.J, for his unreserved love, friendship, prayers and wisdom. We are blessed to have you to preside over our marriage and celebrating the Eucharist.<br><br>All our family and friends, we are blessed to enjoy your love and friendship.<br><br>Thank you for being a part of our celebration today.
+			</td>
+		</tr>
+		<script type="text/javascript">document.write(unescape(txtAcknowledgment));
+				</script>
+	</table>
+</div>
+</body>
+
+</html>
